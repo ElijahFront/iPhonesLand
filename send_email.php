@@ -7,6 +7,7 @@
     $_SESSION["tel"] = $tel;
     $subject = "Landing Page message";
     $theme = "Имя: $name\nНомер телефона: $tel\n";
+
     // $subject = "=?utf-8?B?".base64_decode($subject)."?=";
   /*  $error_email = "";
     $error = false;
@@ -17,7 +18,7 @@
     }
     if (!$error) { */
       $headers = "From : $email\r\nReply-to: $email\r\nContent-type: text/plain; charset=utf-8\r\n";
-      mail ('cuprum19930@gmail.com', $subject, $theme, $headers);
+      mail ('1380888@mail.ru', $subject, $theme, $headers);
       // header ("Location: mailSent.php");
       exit;
 

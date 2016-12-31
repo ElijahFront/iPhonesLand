@@ -68,8 +68,32 @@ a:hover
     flex-wrap: nowrap;
     justify-content: space-between;
     padding-left: 4%;
+    position: relative;
 }
+.header__contacts{
+  position: absolute;
+  top: 20px;
+  right: 6%;
 
+  width: 85px;
+  height: 85px;
+}
+.header__contacts_tel{
+  display: block;
+  width: 85px;
+  height: 85px;
+  /*background: url(img/icons/phone-flat.png) center no-repeat;
+  background-size: contain;*/
+}
+.st1{
+  transition-duration: 200ms;
+}
+.phone__icon_svg:hover .st1{
+
+    fill: #00cd40;
+
+
+}
 .carralax > .headings
 {
     margin-top: 120px;
@@ -179,6 +203,7 @@ a:hover
     align-items: center;
     justify-content: space-around;
     position: relative;
+    margin-bottom: 20px;
 }
 .productionneuh::before{
   content: '';
@@ -207,9 +232,14 @@ a:hover
     /*height: 500px;*/
     display: flex;
     max-width: 325px;
-    width: 20%;
+    /*width: 20%;*/
     flex-direction: column;
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.productionneuh .product img{
+  margin-bottom: 54px;
 }
 
 .productionneuh > .product > .title
@@ -217,7 +247,6 @@ a:hover
     font-family: Helvetica;
     font-size: 48px;
     text-align: center;
-    margin-top: 64px;
 }
 
 .price-list
@@ -238,7 +267,6 @@ a:hover
 {
     font-size: 112px;
     font-family: Helvetica;
-    margin-top: 20px;
 }
 
 .p2
@@ -264,7 +292,7 @@ a:hover
     font-size: 48px;
 }
 
-.feedback > .aytems {
+.feedback > .feedback__comments {
 
     display: flex;
     justify-content: space-between;
@@ -288,6 +316,7 @@ a:hover
 {
     margin-bottom: 20px;
     margin-top: 23px;
+    max-width: 157px;
 }
 
 .item > .comment_text
@@ -380,7 +409,7 @@ a:hover
   justify-content: space-between;
 }
 .social_list__item{
-  min-width: 96px;
+  width: 96px;
   height: 96px;
   transition-duration: 150ms;
 }
@@ -417,6 +446,27 @@ a:hover
   text-align: right;
   /*padding-right: 10px;*/
 }
+.footer__contacts_tel, .footer__contacts_mail{
+  display: block;
+  position: relative;
+}
+.footer__contacts_tel::before, .footer__contacts_mail::before{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 30%;
+  font-style: italic;
+}
+
+.footer__contacts_tel::before{
+  content: 'Телефон:'
+}
+.footer__contacts_mail::before{
+  content: 'E-mail:'
+}
+.footer__contacts_mail a:hover{
+  color: #2c44f7!important;
+}
 .creators{
   opacity: 0.75;
   color: #232323;
@@ -431,3 +481,266 @@ a:hover
   left: 0;
   right: 0;
 }
+
+@media all and (max-width:1360px) {
+  .carralax .headings{
+    /*width: auto;
+    max-width: 35%;*/
+  }
+  .iphone-mock{
+    margin-right: 80px;
+    width: 35%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    align-items: flex-end;
+  }
+  .iphone-mock form{
+    max-width: 75%;
+  }
+  .iphone-mock form .label{
+    font-size: 26px;
+  }
+  .iphone-mock form input{
+    width: 100%!important;
+    height: 55px !important;
+  }
+  .upper_form_submit{
+    margin-top: 17px !important;
+    margin-bottom: 5px !important;
+  }
+  .label-h1{
+    font-size: 100px;
+  }
+  .productionneuh::before{
+    left: 30px;
+    border-width: 12px;
+  }
+  .productionneuh::after{
+    right: 30px;
+    border-width: 12px;
+  }
+  .productionneuh .product{
+    max-width: 290px;
+  }
+  .productionneuh > .product > .title
+  {
+      font-size: 46px;
+      text-align: center;
+  }
+  .item .line{
+    width: 85%;
+  }
+}
+@media all and (max-width:1173px) {
+  .iphone-mock .form .label{
+    font-size: 24px;
+  }
+  .upper_form_submit{
+
+    margin-bottom: 25px !important;
+  }
+  .iphone-mock form input{
+
+    height: 50px !important;
+  }
+
+}
+@media all and (max-width:1044px) {
+  .headings .h2{
+    display: none;
+  }
+  .carralax{
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .iphone-mock{
+    margin: 0 !important;
+    width: 45%;
+  }
+  .iphone-mock .form{
+    max-width: 70% ;
+  }
+  .carralax .headings{
+    margin-top: 40px;
+    width: 70%;
+
+  }
+  .carralax .headings .h1{
+    font-size: 40px;
+
+  }
+}
+@media all and (max-width:960px) {
+  .productionneuh .product img{
+    max-width: 100%;
+  }
+  .productionneuh .product{
+    max-width: 220px;
+  }
+  .productionneuh > .product > .title
+  {
+      font-size: 40px;
+      text-align: center;
+  }
+  .productionneuh::before{
+    left: 15px;
+    border-width: 14px;
+  }
+  .productionneuh::after{
+    right: 15px;
+    border-width: 14px;
+  }
+  .feedback__comments .item:nth-child(1), :nth-child(2){
+    margin-right: 5px;
+  }
+}
+@media all and (max-width:860px) {
+  .iphone-mock form input{
+    height: 45px !important;
+  }
+  .iphone-mock .form .label{
+    font-size: 21px;
+  }
+  .upper_form_submit{
+    font-size: 24px !important;
+  }
+  .upper-form_input{
+    font-size: 24px !important;
+  }
+  .footer__contacts_tel::before, .footer__contacts_mail::before{
+    left: 5%;
+  }
+}
+@media all and (max-width:780px){
+
+  .header__contacts{
+    width: 55px;
+    height: 55px;
+  }
+  .header__contacts_tel{
+    width: 55px;
+    height: 55px;
+  }
+    .header__contacts_tel{
+
+    }
+
+    .iphone-mock{
+      width: 60%;
+      min-width: 324px;
+    }
+    .carralax .headings .h1{
+      font-size: 35px;
+    }
+    .label-h1{
+      font-size: 80px;
+      text-align: center;
+    }
+    .productionneuh{
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
+    .productionneuh .product{
+      margin-bottom: 50px;
+      max-width: 270px;
+    }
+    .productionneuh .product img{
+      margin-bottom: 23px;
+    }
+    .productionneuh > .product > .title
+    {
+        font-size: 36px;
+        text-align: center;
+    }
+    .eich-two{
+      font-size: 39px;
+      text-align: center;
+    }
+    .feedback__comments{
+      flex-direction: column;
+      align-items: center;
+    }
+    .promo_button{
+      width: auto;
+      font-size: 35px;
+    }
+    .footer{
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 15px;
+    }
+    .social_header{
+      font-size: 20px;
+    }
+    .social_list{
+      margin-bottom: 95px;
+    }
+    .copyright{
+      margin: 0;
+      margin-bottom: 50px;
+      font-size: 17px;
+      text-align: center;
+    }
+    .creators{
+      font-size: 12px;
+    }
+    .footer__contacts_tel::before, .footer__contacts_mail::before{
+      left: -5%;
+    }
+  }
+  @media all and (max-width:480px) {
+
+    .header__contacts{
+      top: 195px;
+    }
+    .label-h3{
+      text-align: center;
+    }
+    .header__contacts_tel{
+      font-size: 22px;
+    }
+    .carralax{
+      padding: 0;
+    }
+    .iphone-mock{
+      min-width: 300px !important;
+    }
+    .iphone-mock .form .label{
+      font-size: 18px;
+    }
+
+    .carralax .headings{
+      width: auto;
+    }
+
+    .promo .h2{
+      font-size: 35px;
+    }
+    .promo .h1{
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+    .promo_button{
+      font-size: 25px;
+    }
+    .footer{
+      padding: 0;
+    }
+    .footer_social{
+      width: 85%;
+    }
+    .social_list{
+      margin-right: 0;
+      margin-bottom: 80px;
+    }
+    .social_list__item{
+      width: 50px;
+      height: 50px;
+    }
+    .copyright{
+      max-width: 80%;
+    }
+  }
